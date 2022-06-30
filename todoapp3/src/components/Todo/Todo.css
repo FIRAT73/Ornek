@@ -1,0 +1,119 @@
+.Todo {
+    width: 80%;
+    display: flex;
+    margin: 5px auto;
+    padding: 30px 25px;
+    background-color: #8bc69472;
+    justify-content: space-evenly;
+    color: #1f363d;
+    min-width: fit-content;
+  }
+  .Edit-Form-Container {
+    background-color: #8bc69472;
+    width: 70%;
+    margin: 5px auto;
+  }
+  .Todo .NotDone {
+    border: 2px solid #0c745c;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    /* padding: 10px; */
+    align-self: flex-start;
+  }
+  
+  .Todo .Done {
+    /* background-color: rgb(7, 154, 68); */
+    background-color: green;
+    background-image: url("tick.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeIn 0.5s;
+  }
+  li {
+    margin: 0 5px;
+    width: 200px;
+    overflow: auto;
+    height: auto;
+    text-align: left;
+    list-style: none;
+    align-self: flex-start;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  .Todo .Done + li {
+    text-decoration: 2px #1f363d line-through;
+    color: #1f363d;
+    animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .Todo .Buttons {
+    align-self: flex-start;
+  }
+  button {
+    margin: 0 4px;
+    color: whitesmoke;
+    background-color: #1b7695;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    display: inline;
+    width: 3rem;
+    box-shadow: 1px 2px 1px rgb(20, 84, 87);
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  button:active {
+    background-color: rgb(4, 87, 108);
+  }
+  button:disabled {
+    color: rgb(225, 222, 222);
+    background-color: rgb(4, 87, 108);
+  }
+  
+  #Edit-Todo-Form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* width: 80%; */
+    flex-grow: inherit;
+  }
+  
+  form input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1rem;
+    font-size: initial;
+    /* margin: auto 1px; */
+    border-radius: 5px;
+  }
+  
+  input,
+  #Edit-Todo-Form button {
+    font-family: "Quicksand", sans-serif;
+    height: 2.2rem;
+  }
+  form button {
+    width: 3.5rem;
+  }
+  @media screen and (max-width: 600px) {
+    li {
+      width: 100px;
+    }
+  
+    .Todo {
+      padding: 20px 10px;
+    }
+  }
